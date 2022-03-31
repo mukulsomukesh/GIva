@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../css/design.css">
+
+</head>
+
+<body>
+
+    <div style="background-color: red;">
+        <button onclick="fun1()" style="height: 40px; width:150px; background-color:yellow; border:none; margin-left:300px; margin-top:50px"> Rings</button>
+        <button onclick="fun2()" style="height: 40px; width:150px; background-color:yellow; border:none; margin-left:50px; margin-top:50px"> Necklaces & Pendants</button>
+        <button onclick="fun3()" style="height: 40px; width:150px; background-color:yellow; border:none; margin-left:50px; margin-top:50px"> Earrings</button>
+        <button onclick="fun4()" style="height: 40px; width:150px; background-color:yellow; border:none; margin-left:50px; margin-top:50px"> Jewellery Sets</button>
+    </div>
+
+</body>
+<script>
+    function fun1() {
+        var t = "Rings";
+        localStorage.setItem("Display_Category", t);
+        window.open("template.html", "_self");
+    }
+
+    function fun2() {
+        var t = "Necklaces_&_Pendants";
+        localStorage.setItem("Display_Category", t);
+        window.open("template.html", "_self");
+    }
+
+    function fun3() {
+        var t = "Earrings";
+        localStorage.setItem("Display_Category", t);
+        window.open("template.html", "_self");
+    }
+
+    function fun4() {
+        var t = "Jewellery Sets";
+        localStorage.setItem("Display_Category", t);
+        window.open("template.html", "_self");
+    }
+</script>
+
+</html>

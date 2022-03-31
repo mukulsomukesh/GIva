@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+<h1> Cart Item </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>category</th>
+                <th>title</th>
+                <th>New Price</th>
+                <th>Old price</th>
+                <th>Image url</th>
+            </tr>
+        </thead>
+        <tbody id="table_body">
+            <!-- Append your output to tbody -->
+        </tbody>
+    </table>
+
+
+</body>
+
+<!-- add data file -->
+<script src="../js/data.js"></script>
+
+<script>
+
+    var CartProducts = JSON.parse(localStorage.getItem("add_to_cart")) || [];
+    
+
+    CartProducts.map(function(elem) {
+        var r = document.createElement("tr");
+            var td1 = document.createElement("td");
+            td1.innerText = elem.category;
+            td1.style.backgroundColor = "red";
+            td1.width="150px";
+          
+            var td2 = document.createElement("td");
+            td2.innerText = elem.title;
+            td2.width="350px";
+            td2.style.backgroundColor = "yellow";
+
+            var td3 = document.createElement("td");
+            td3.innerText = elem.NewPrice;
+            td3.style.backgroundColor = "green";
+            td3.width="150px";
+          
+            var td4 = document.createElement("td");
+            td4.innerText = elem.OldPrice;
+            td4.style.backgroundColor = "purple";
+            td4.width="150px";
+          
+
+            var td5 = document.createElement("td");
+            td5.width="150px";
+          
+            var picture = document.createElement("img");
+            picture.src = elem.pic;
+            picture.style.height = "100px";
+            td5.append(picture);
+
+            r.append(td1, td2, td3, td4, td5);
+            document.querySelector("tbody").append(r);
+    })
+
+
+
+</script>
+
+</html>
+
