@@ -1,0 +1,207 @@
+ /* #navbar {
+        display: flex;
+        justify-content: space-around;
+        background-color: teal;
+        padding: 10px;
+      }
+      a {
+        text-decoration: none;
+      }
+      #navbar a:hover {
+        color: white;
+      }
+      #navbar a {
+        cursor: pointer;
+      } */
+      #heading {
+        text-align: center;
+        font-size: 30px;
+        font-family:"Avenir Next", sans-serif;
+        color:  #3d4246;
+        margin-top: 50px;
+        letter-spacing: 1px;
+      }
+    
+       #data{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: "Avenir Next", sans-serif;
+        color: #3d4246;
+      
+       
+    }
+       
+ 
+       form>input{
+         width: 700px;
+         padding: 15px;
+         
+         /* display: block;
+         margin: auto; */
+       }
+ 
+       #btn_create{
+         width: 100px; 
+         padding: 10px;
+        background-color: #3d4246;
+        color: white;
+         display: block;
+         margin: auto;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-family: "Avenir Next", sans-serif;
+        letter-spacing: 1px;
+        margin-bottom: 70px;
+        }
+ 
+        #btn_create:hover{
+          background-color: black;
+        }
+       @media all and (min-width:381px)and (max-width: 720px) {
+         
+                form>input{
+                  width: 300px;
+                }
+       }
+       @media all and (min-width:80px)and (max-width: 380px) {
+         
+        form>input{
+          width: 200px;
+        }
+      }
+
+       /* footer code */
+
+      body {
+        margin: 0px;
+        font-family: sans-serif;
+      }
+      
+      #First_Footer {
+        padding: 20px;
+        background-color: #f5f5f5;
+        display: grid;
+        grid-template-columns: 25% 50% 22%;
+        grid-template-rows: auto;
+      }
+      
+      /* Medium screens - take min width and max width according to your screen sizes */
+      
+      @media all and (max-width: 750px) {
+        #First_Footer {
+          width: 100%;
+          background-color: #f5f5f5;
+          display: grid;
+          grid-template-columns: 100%;
+          grid-template-rows: auto auto auto;
+        }
+      
+      }
+      
+      
+      #First_Footer_Item {
+        color: #3d4246;
+        margin: 0px 10px 0px 30px;
+        font-size: 15px;
+        padding: 10px 15px 10px 10px;
+      }
+      
+      #First_Footer>#First_Footer_Item>a {
+        line-height: 25px;
+        text-decoration: none;
+        color: #3d4246;
+      }
+      
+      #First_Footer>#First_Footer_Item>input {
+        height: 20px;
+        margin-right: -5px;
+        width: 65%;
+        padding: 10px 18px;
+      }
+      
+      #First_Footer>#First_Footer_Item>button {
+        color: white;
+        height: 44px;
+        margin: 0px;
+        width: 20%;
+        background-color: #3d4246;
+        border: none;
+      }
+      
+      #First_Footer>#First_Footer_Item>p:nth-child(1) {
+        margin-bottom: 30px;
+        font-size: 13px;
+      }
+      
+      
+      #Second_Footer {
+        background-color: #f5f5f5;
+        border-top: 1px solid #3d4246;
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto;
+        justify-content: space-between;
+      }
+      
+      /* Medium screens - take min width and max width according to your screen sizes */
+      
+      @media all and (max-width: 750px) {
+        #Second_Footer {
+          text-align: center;
+          background-color: #f5f5f5;
+          border-top: 1px solid #3d4246;
+          display: grid;
+          grid-template-columns: auto;
+          grid-template-rows: auto auto;
+          justify-content: space-between;
+        }
+      
+        #Second_Footer>#Second_Footer_Item_SocialMedia {
+          margin: auto;
+        }
+      
+      
+      }
+      
+      
+      #Second_Footer_Item_SocialMedia {
+        padding: 10px;
+        margin-left: 50px;
+        font-size: 13px;
+      }
+      
+      #Second_Footer_Item_SocialMedia>#Second_Footer_logo {
+        margin-right: 30px;
+        display: inline;
+      }
+      
+      #Second_Footer_Item_Payment_Logo>#Second_Footer_logo {
+        margin-right: 20px;
+        display: inline;
+      }
+      
+      #Second_Footer_logo>img {
+        height: 30px;
+        width: 30px;
+      }
+      
+      #Second_Footer_Item_Payment_Logo {
+        padding: 10px;
+      }
+      
+      
+      #Second_Footer_Item_Payment_Logo>#Second_Footer_logo {
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      }
+      
+      #Second_Footer_Item_Payment_Logo>#Second_Footer_logo>img {
+        height: 20px;
+        width: 30px;
+      }
+      
+      #Second_Footer>p {
+        font-size: 13px;
+        margin-left: 60px;
+      }

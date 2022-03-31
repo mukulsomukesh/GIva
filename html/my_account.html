@@ -2,45 +2,64 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Login Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account Page</title>
 
-  <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/my_account.css">
+
 </head>
 
 <body>
 
-  <div id="login_heading">
-    <p>Login</p>
-  </div>
+    <div id="my_account">
+        <p>My Account</p>
+        <p>
+            <a href="index.html">Log Out</a>
+        </p>
+    </div>
+    <div id="two_box">
+        <div id="order_history">
+            <p id="order">ORDER HISTORY</p>
+            <p>Note</p>
+            <ul>
+                <li>
+                    Please note dispatched orders cannot be cancelled from here. You can, however, refuse to accept
+                    the order or initiate a return on the same. For paid orders which are dispatched, refunds can
+                    only be done once the order has been returned.
+                </li>
+                <li>
+                    Returns can be done for upto 30 days from date of delivery.
+                </li>
+                <li>
+                    To return an order, please click on the order number and Click on return on the order page.
+                </li>
+                <li>
+                    To track your order, please click on the order number and then click on track button in the
+                    order details screen.
+                </li>
+            </ul>
+            <p>You haven't placed any orders yet. </p>
 
-  <div id="email_password">
-    <form>
-      <p>Email</p>
-      <input id="email" type="email" />
-      <p>Password</p>
-      <input id="pass" type="text" />
-      <br>
-      <br>
-  </div>
-  <div id="login_bottom_part">
-    <div id="forget_pass"><a href="forget.html">Forgot your password?</a></div>
+        </div>
 
-    <button id="btn_signin">SIGN IN</button>
-    <br>
-    <br>
-    <br>
 
-    <div id="create_acc"><a href="singup.html">Create account</a></div>
-  </div>
-  </form>
-  <!-- </div> -->
+        <div id="Account_details">
+            <p>ACCOUNT DETAILS</p>
+            <p id="user_name">Please Login</p>
+              <p>India</p>
+            <p>
+                <button href="address.html">VIEW ADDRESSES(1)</button>
+            </p>
+        </div>
+    </div>
 
-  <!-- footer code -->
 
-  <div id="First_Footer">
+<!-- footer code -->
+
+
+<div id="First_Footer">
     <div id="First_Footer_Item">
 
       <p> Quick links </p>
@@ -96,9 +115,7 @@
   </div> 
 
 
-
 </body>
-
-<script src="login.js"></script>
-
+<script>
+  document.getElementById("user_name").innerText=localStorage.getItem("Display_name"); </script>
 </html>
