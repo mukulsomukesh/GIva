@@ -1,117 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../css/showProductDesign.css">
+    <title>product</title>
+    <style>
+
+    </style>
 </head>
+
 <body>
-    
-    <div class="show_product_container">
 
-        <div class="show_product_media">
+<h1> view product </h1>
+    <table>
+        <thead>
+            <tr>
+                <th>category</th>
+                <th>title</th>
+                <th>New Price</th>
+                <th>Old price</th>
+                <th>Image url</th>
+            </tr>
+        </thead>
+        <tbody id="table_body">
+            <!-- Append your output to tbody -->
+        </tbody>
+    </table>
 
-          <div class="slideshow-container">
-
-            <div class="mySlides fade" style="display: block;">
-              <img src="https://images.unsplash.com/photo-1532974241000-d7ead14166e8?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
-            </div>
-          
-            <div class="mySlides fade">
-              <img src="https://images.unsplash.com/photo-1519285257760-74df0a0bd59c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
-            </div>
-          
-            <div class="mySlides fade">
-              <img src="https://images.unsplash.com/photo-1468649437954-f86751c119b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" style="width:100%">
-            </div>
-          
-          </div>
-          <br>
-          <div style="text-align:center">
-            <span class="dot active" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
-            
-           
-          </div> 
-        </div>
-
-        <div class="show_product_details">
-          <strong>right</strong> 
-        </div>  
-      </div>   
-        
 
 </body>
 
-<script> 
+<!-- add data file -->
+<script src="../js/data.js"></script>
 
-  var slideIndex = 0;
-  var slideIndexCurrent = 0;
-  showSlides();
-  //showSlidesCurrent(slideIndexCurrent);
-  
-  function currentSlide(n) {
-    showSlidesCurrent(slideIndexCurrent = n);
-  
-  }
-  
-  
-  /*** CURRENT SLIDE on click ***/
-  function currentSlide(n) {
-    showSlidesCurrent(slideIndexCurrent = n);
-  
-  }
-  
-  function showSlidesCurrent(n) {
-    //var slideIndex = 1;
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndexCurrent = 1}   
-  
-    if (n < 0) {slideIndexCurrent = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndexCurrent-1].style.display = "block";  
-    dots[slideIndexCurrent-1].className += " active";
-    slideIndexCurrent++;
-  }
-  
-  
-  /*** SHOW SLIDE with timer ***/
-  function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-  
-    setTimeout(showSlides, 3000); // Change image every x seconds
-  }
-  
-  //  showSlidesCurrent(slideIndexCurrent);
+<script>
+
+    var CartProducts = JSON.parse(localStorage.getItem("Display_Product")) || [];
+
+    CartProducts.map(function(elem) {
+        var r = document.createElement("tr");
+            var td1 = document.createElement("td");
+            td1.innerText = elem.category;
+            td1.style.backgroundColor = "red";
+            td1.width="150px";
+          
+            var td2 = document.createElement("td");
+            td2.innerText = elem.title;
+            td2.width="350px";
+            td2.style.backgroundColor = "yellow";
+
+            var td3 = document.createElement("td");
+            td3.innerText = elem.NewPrice;
+            td3.style.backgroundColor = "green";
+            td3.width="150px";
+          
+            var td4 = document.createElement("td");
+            td4.innerText = elem.OldPrice;
+            td4.style.backgroundColor = "purple";
+            td4.width="150px";
+          
+
+            var td5 = document.createElement("td");
+            td5.width="150px";
+          
+            var picture = document.createElement("img");
+            picture.src = elem.pic;
+            picture.style.height = "100px";
+            td5.append(picture);
+
+            r.append(td1, td2, td3, td4, td5);
+            document.querySelector("tbody").append(r);
+    })
+
+
+
 </script>
 
 </html>
-
-
-<!-- https://codepen.io/fadzrinmadu/pen/JjWmxaj -->
-<!-- <video playsinline="playsinline" loop="loop" autoplay="autoplay" muted="muted" preload="metadata" aria-label="Silver Eternity Couple Band" poster="//cdn.shopify.com/s/files/1/0061/8378/0442/products/e735b946411843c58f4ca8dd550fdee3.thumbnail.0000000_small.jpg?v=1646289099"><source src="https://cdn.shopify.com/videos/c/vp/e735b946411843c58f4ca8dd550fdee3/e735b946411843c58f4ca8dd550fdee3.m3u8" type="application/x-mpegURL"><source src="https://cdn.shopify.com/videos/c/vp/e735b946411843c58f4ca8dd550fdee3/e735b946411843c58f4ca8dd550fdee3.HD-1080p-2.5Mbps.mp4" type="video/mp4"><img src="//cdn.shopify.com/s/files/1/0061/8378/0442/products/e735b946411843c58f4ca8dd550fdee3.thumbnail.0000000_small.jpg?v=1646289099"></video> -->
 

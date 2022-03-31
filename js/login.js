@@ -1,11 +1,8 @@
-document.querySelector("form").addEventListener("submit", loginFun);
-
-var regdUsers = JSON.parse(localStorage.getItem("userCred"));
+var regdUsers = JSON.parse(localStorage.getItem("userCred")) || [];
 console.log(regdUsers);
 
 function loginFun() {
-  event.preventDefault();
-
+  console.log("fun");
   var enteredEmail = document.querySelector("#email").value;
   var enteredPass = document.querySelector("#pass").value;
   //console.log(email, pass);
