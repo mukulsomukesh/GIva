@@ -18,7 +18,7 @@ function loginFun() {
     if (elem.email == enteredEmail && elem.password == enteredPass) {
       alert("login success");
       flag = true;
-      window.location.href = "index.html";
+      window.location.href = "my_account.html";
 
     }
   });
