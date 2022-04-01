@@ -7,13 +7,231 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product</title>
     <style>
+        .show_product_container {
+            height: 1000px;
+            width: 100%;
+            display: inline-flex;
+            justify-content: center;
+        }
 
+        .show_product_media {
+            height: 50%;
+            width: 30%;
+         }
+
+        .show_product_details {
+            padding: 20px;
+            height: 100%;
+            width: 30%;
+        
+        }
+
+        #rating {
+            background-color: #efefef;
+            height: 20px;
+            width: 150px;
+            padding: 5px;
+        }
+
+
+        #show_price_price {
+            display: inline-flex;
+        }
+
+        #show_price_price>p {
+            margin-right: 10px;
+        }
+
+        #wrap_product {
+            transform: scale(1.5);
+        }
+
+        .show_product_details>button {
+            height: 45px;
+            padding: 10px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        button {
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+            background-color: transparent;
+        }
+
+        #check_delivery_input {
+            width: 80%;
+            height: 30px;
+            padding: 2px;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+        }
+
+        #check_delivery_btn {
+            padding: 2px;
+            width: 18%;
+            height: 33px;
+            border: none;
+            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+        }
+
+
+        #Below_Delevery_Check_Container {
+            margin-top: 40px;
+            text-align: center;
+            display: inline-flex;
+            height: 100px;
+            width: 100%;
+        }
+
+        #Below_Delevery_Check_Container>div {
+            padding: 5px;
+            height: 100px;
+            width: 25%;
+        }
+
+        #Below_Delevery_Check_Container>div>img {
+            height: 25px;
+            width: 25px;
+        }
+
+
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
     </style>
+
+    <script src="https://kit.fontawesome.com/d1feb19a20.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
 
-<h1> view product </h1>
+
+    <div class="show_product_container">
+        <div class="show_product_media">
+
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <img src="https://cdn.shopify.com/s/files/1/0061/8378/0442/products/R063_1_2_1024x1024.jpg?v=1626172538"
+                        style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="https://cdn.shopify.com/s/files/1/0061/8378/0442/products/R063_1_2_1024x1024.jpg?v=1626172538"
+                        style="width:100%">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="https://cdn.shopify.com/s/files/1/0061/8378/0442/products/R063_1_2_1024x1024.jpg?v=1626172538"
+                        style="width:100%">
+                </div>
+
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+        </div>
+
+        <div class="show_product_details">
+            <h1 id="show_product_title"> Golden Elephant Charm Necklace </h1>
+            <p>MADE WITH PURE 925 SILVER</p>
+            <div id="rating"> 5.0 | <i class="fa-solid fa-star" style="color: rgb(255, 196, 0);"></i> 2 Reviews </p>
+            </div>
+
+            <div id="show_price_price">
+                <p id="show_price_price_New"> 2550.00 </p>
+                <p id="show_price_price_Old"> 3550.00 </p>
+            </div> <br>
+            <img src="../media/a.jpg">
+            <p> Tax Inxluded</p>
+
+            <input type="checkbox" id="wrap_product">
+            <label for="wrap_product"> Add Gift Wrap to your Order (Rs. 50)</label><br>
+
+            <button onclick="addToCart()"> ADD TO CART </button> <br>
+            <button onclick="buyItNow()" style="background-color: #3d4246; color:white"> BUY IT NOW </button> <br>
+            <button onclick="addToWishlist()"> ADD TO WISHLIST </button>
+
+            <p> ESTIMATED DELIVERY TIME </p>
+            <input type="text" id="check_delivery_input"><button id="check_delivery_btn">CHECK</button>
+
+            <div id="Below_Delevery_Check_Container">
+                <div style="border-right:1px solid rgba(0, 0, 0, 0.432) ;">
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0061/8378/0442/t/76/assets/returns_small.png?v=1773164919095747155">
+                    <p>30 days easy return</p>
+                </div>
+                <div style="border-right:1px solid rgba(0, 0, 0, 0.432) ;">
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0061/8378/0442/t/76/assets/certificate_small.png?v=13131864088800804019">
+                    <p>Authenticity certificate</p>
+                </div>
+                <div style="border-right:1px solid rgba(0, 0, 0, 0.432) ;">
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0061/8378/0442/t/76/assets/Female.png?v=4193799419793896922">
+                    <p>Best Suited for Women</p>
+                </div>
+                <div>
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0061/8378/0442/t/76/assets/warranty_icon.png?v=14515272874595730033">
+                    <p>6 Months Plating Warranty</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <h1> view product </h1>
     <table>
         <thead>
             <tr>
@@ -39,44 +257,79 @@
 
     var CartProducts = JSON.parse(localStorage.getItem("Display_Product")) || [];
 
-    CartProducts.map(function(elem) {
+    CartProducts.map(function (elem) {
         var r = document.createElement("tr");
-            var td1 = document.createElement("td");
-            td1.innerText = elem.category;
-            td1.style.backgroundColor = "red";
-            td1.width="150px";
-          
-            var td2 = document.createElement("td");
-            td2.innerText = elem.title;
-            td2.width="350px";
-            td2.style.backgroundColor = "yellow";
+        var td1 = document.createElement("td");
+        td1.innerText = elem.category;
+        td1.style.backgroundColor = "red";
+        td1.width = "150px";
 
-            var td3 = document.createElement("td");
-            td3.innerText = elem.NewPrice;
-            td3.style.backgroundColor = "green";
-            td3.width="150px";
-          
-            var td4 = document.createElement("td");
-            td4.innerText = elem.OldPrice;
-            td4.style.backgroundColor = "purple";
-            td4.width="150px";
-          
+        var td2 = document.createElement("td");
+        td2.innerText = elem.title;
 
-            var td5 = document.createElement("td");
-            td5.width="150px";
-          
-            var picture = document.createElement("img");
-            picture.src = elem.pic;
-            picture.style.height = "100px";
-            td5.append(picture);
 
-            r.append(td1, td2, td3, td4, td5);
-            document.querySelector("tbody").append(r);
+
+        td2.width = "350px";
+        td2.style.backgroundColor = "yellow";
+
+        var td3 = document.createElement("td");
+        td3.innerText = elem.NewPrice;
+        td3.style.backgroundColor = "green";
+        td3.width = "150px";
+
+        var td4 = document.createElement("td");
+        td4.innerText = elem.OldPrice;
+        td4.style.backgroundColor = "purple";
+        td4.width = "150px";
+
+
+        var td5 = document.createElement("td");
+        td5.width = "150px";
+
+        var picture = document.createElement("img");
+        picture.src = elem.pic;
+        picture.style.height = "100px";
+        td5.append(picture);
+
+        r.append(td1, td2, td3, td4, td5);
+        document.querySelector("tbody").append(r);
+
+        document.querySelector("#show_price_price_New").innerText = elem.NewPrice;
+        document.querySelector("#show_price_price_Old").innerText = elem.OldPrice;
+        document.querySelector("#show_product_title").innerText = elem.title;
     })
 
 
+    function addToCart() {
+        alert("cart");
+    }
+    function buyItNow() {
+        alert("buy");
+    }
+    function addToWishlist() {
+        alert("wishlist");
+    }
 
+
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
 </script>
 
 </html>
-
