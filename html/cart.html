@@ -239,43 +239,26 @@
     <div id="cart_container">
 
         <div id="cart_product">
-            <table>
-                <thead>
-                    <tr>
-                    </tr>
-                </thead>
-                <tbody id="table_body">
-                    <!-- Append your output to tbody -->
-                    <tr>
-                        <td> image </td>
-                        <td> title </td>
-                    </tr>
-                </tbody>
-            </table>
-
+         <img id="productImage" src="https://www.firstpost.com/wp-content/uploads/2021/11/admin-ajax-49-1.jpg?impolicy=website&width=320&height=180">
+        
+         <div id="productTitleQty">
+        <p id="producttitle"> title </p>
+        <button> - </button><button> 1 </button><button> + </button>
+    </div>
+        <div id="productPrice">
+         <p id="currentPrice"> 1200</p>
+         <p id="previousPrice"> 1233 </p>
+         <i class="fa-solid fa-trash-can"></i>
         </div>
 
-        <div id="cart_product">
+    </div>
+        <div id="cart_product" style="background-color:#f7f7f7">
+
+            <p> Order Summary </p>
 
         </div>
 
     </div>
-
-
-
-
-
-    <table>
-        <thead>
-            <tr>
-            </tr>
-        </thead>
-        <tbody id="table_body">
-            <!-- Append your output to tbody -->
-        </tbody>
-    </table>
-
-
 
     <!-- footer code -->
 
@@ -347,33 +330,10 @@
 
     CartProducts.map(function (elem) {
 
-        var r = document.createElement("tr");
-        var td1 = document.createElement("td");
-        td1.innerText = elem.category;
-
-
-        var td2 = document.createElement("td");
-        td2.innerText = elem.title;
-
-
-        var td3 = document.createElement("td");
-        td3.innerText = elem.NewPrice;
-
-        var td4 = document.createElement("td");
-        td4.innerText = elem.OldPrice;
-
-
-        var td5 = document.createElement("td");
-
-        var picture = document.createElement("img");
-        picture.src = elem.pic;
-        picture.style.height = "100px";
-        td5.append(picture);
-
-
-        r.append(td5, td2, td3, td4, td1);
-        document.querySelector("tbody").append(r);
-
+        document.querySelector("#producttitle").innerText=elem.title; 
+        document.querySelector("#currentPrice").innerText=elem.NewPrice;
+        document.querySelector("#previousPrice").innerText=elem.OldPrice;
+        document.querySelector("#productImage").src=elem.pic;
 
     })
 
