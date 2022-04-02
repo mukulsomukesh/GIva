@@ -1,0 +1,24 @@
+body{
+    margin: 0px;
+}
+
+#cart_container{
+width: 100%;
+height:auto;
+display: inline-flex;
+justify-content: center;
+border: 2px solid red;
+}
+
+#cart_product:first-child{
+    margin-right: 10px;
+    height: fit-content;
+    width: 50%;
+    border: 1px solid rgb(82, 156, 104);
+}
+
+#cart_product{
+    height: 500px;
+    width: 20%;
+    border: 1px solid blue;
+    }

@@ -6,28 +6,120 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/cart.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <script src="https://kit.fontawesome.com/d1feb19a20.js" crossorigin="anonymous"></script>
     <style>
+
 
     </style>
 </head>
 
 <body>
 
-<h1> Cart Item </h1>
+    <div style="text-align: center;">
+        <p> Cart <i class="fa-solid fa-greater-than"></i> Information <i class="fa-solid fa-greater-than"></i> Payment
+        </p>
+        <h1> Your cart </h1>
+    </div>
+
+    <div id="cart_container">
+
+        <div id="cart_product">
+            <table>
+                <thead>
+                    <tr>
+                    </tr>
+                </thead>
+                <tbody id="table_body">
+                    <!-- Append your output to tbody -->
+                    <tr>
+                        <td> image </td>
+                        <td> title </td>
+                    </tr>
+                </tbody>
+            </table>
+        
+        </div>
+
+        <div id="cart_product">
+
+        </div>
+
+    </div>
+
+
+
+
+
     <table>
         <thead>
             <tr>
-                <th>category</th>
-                <th>title</th>
-                <th>New Price</th>
-                <th>Old price</th>
-                <th>Image url</th>
             </tr>
         </thead>
         <tbody id="table_body">
             <!-- Append your output to tbody -->
         </tbody>
     </table>
+
+
+
+    <!-- footer code -->
+
+    <div id="First_Footer">
+        <div id="First_Footer_Item">
+
+            <p> Quick links </p>
+
+            <a href=""> Careers </a> <br>
+            <a href=""> Jewellery care</a> <br>
+            <a href=""> Reviews</a> <br>
+            <a href=""> Privacy policy</a> <br>
+            <a href="">Shipping & Handling</a> <br>
+            <a href="">Terms of service</a> <br>
+            <a href="">Frequently Asked Questions</a> <br>
+
+        </div>
+
+        <div id="First_Footer_Item">
+            <p> Newsletter </p>
+            <input type="email" placeholder="Email address"> <button>SUBSCRIBE</button>
+        </div>
+
+        <div id="First_Footer_Item">
+            <p> Contact us </p>
+            <p> BIS : HM/C - 6290031216 </p>
+            <p> For any suggestions, queries or complaints please contact us at :</p>
+            <p> - care@giva.co </p>
+            <p> - 080-47189504 (10 AM to 6:30 PM) </p>
+        </div>
+    </div>
+
+    <div id="Second_Footer">
+        <div id="Second_Footer_Item_SocialMedia">
+            <div id="Second_Footer_logo"> <img src="../media/Second_Footer_logo_facebook.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/Second_Footer_logo_instagram.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/Second_Footer_logo_youtube.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/Second_Footer_logo_linkedin.png" /> </div>
+        </div>
+
+        <div id="Second_Footer_Item_Payment_Logo">
+            <div id="Second_Footer_logo"> <img src="../media/airtel.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/amezon.jpg" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/amex.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/mastercard.jpg" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/mobi.webp" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/googlepay.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/emblem-Paypal.jpg" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/paytm.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/hdfc.jpg" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/rupay.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/visa.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/amex.png" /> </div>
+
+        </div>
+        <p> © 2022, GIVA Jewellery </p>
+    </div>
 
 
 </body>
@@ -38,41 +130,38 @@
 <script>
 
     var CartProducts = JSON.parse(localStorage.getItem("add_to_cart")) || [];
-    
 
-    CartProducts.map(function(elem) {
+
+    CartProducts.map(function (elem) {
+
         var r = document.createElement("tr");
-            var td1 = document.createElement("td");
-            td1.innerText = elem.category;
-            td1.style.backgroundColor = "red";
-            td1.width="150px";
-          
-            var td2 = document.createElement("td");
-            td2.innerText = elem.title;
-            td2.width="350px";
-            td2.style.backgroundColor = "yellow";
+        var td1 = document.createElement("td");
+        td1.innerText = elem.category;
 
-            var td3 = document.createElement("td");
-            td3.innerText = elem.NewPrice;
-            td3.style.backgroundColor = "green";
-            td3.width="150px";
-          
-            var td4 = document.createElement("td");
-            td4.innerText = elem.OldPrice;
-            td4.style.backgroundColor = "purple";
-            td4.width="150px";
-          
 
-            var td5 = document.createElement("td");
-            td5.width="150px";
-          
-            var picture = document.createElement("img");
-            picture.src = elem.pic;
-            picture.style.height = "100px";
-            td5.append(picture);
+        var td2 = document.createElement("td");
+        td2.innerText = elem.title;
 
-            r.append(td1, td2, td3, td4, td5);
-            document.querySelector("tbody").append(r);
+
+        var td3 = document.createElement("td");
+        td3.innerText = elem.NewPrice;
+
+        var td4 = document.createElement("td");
+        td4.innerText = elem.OldPrice;
+
+
+        var td5 = document.createElement("td");
+
+        var picture = document.createElement("img");
+        picture.src = elem.pic;
+        picture.style.height = "100px";
+        td5.append(picture);
+
+
+        r.append(td5, td2, td3, td4, td1);
+        document.querySelector("tbody").append(r);
+
+
     })
 
 
@@ -80,4 +169,3 @@
 </script>
 
 </html>
-

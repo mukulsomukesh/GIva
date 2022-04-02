@@ -6,143 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>product</title>
-    <style>
-        .show_product_container {
-            height: 1000px;
-            width: 100%;
-            display: inline-flex;
-            justify-content: center;
-        }
-
-        .show_product_media {
-            height: 50%;
-            width: 30%;
-         }
-
-        .show_product_details {
-            padding: 20px;
-            height: 100%;
-            width: 30%;
-        
-        }
-
-        #rating {
-            background-color: #efefef;
-            height: 20px;
-            width: 150px;
-            padding: 5px;
-        }
-
-
-        #show_price_price {
-            display: inline-flex;
-        }
-
-        #show_price_price>p {
-            margin-right: 10px;
-        }
-
-        #wrap_product {
-            transform: scale(1.5);
-        }
-
-        .show_product_details>button {
-            height: 45px;
-            padding: 10px;
-            width: 100%;
-            margin-top: 10px;
-        }
-
-        button {
-            border: none;
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
-            background-color: transparent;
-        }
-
-        #check_delivery_input {
-            width: 80%;
-            height: 30px;
-            padding: 2px;
-            border: none;
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
-        }
-
-        #check_delivery_btn {
-            padding: 2px;
-            width: 18%;
-            height: 33px;
-            border: none;
-            box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
-        }
-
-
-        #Below_Delevery_Check_Container {
-            margin-top: 40px;
-            text-align: center;
-            display: inline-flex;
-            height: 100px;
-            width: 100%;
-        }
-
-        #Below_Delevery_Check_Container>div {
-            padding: 5px;
-            height: 100px;
-            width: 25%;
-        }
-
-        #Below_Delevery_Check_Container>div>img {
-            height: 25px;
-            width: 25px;
-        }
-
-
-
-        /* Slideshow container */
-        .slideshow-container {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
-        }
-
-        /* The dots/bullets/indicators */
-        .dot {
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
-        }
-
-        .active {
-            background-color: #717171;
-        }
-
-        /* Fading animation */
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @keyframes fade {
-            from {
-                opacity: .4
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-
-        /* On smaller screens, decrease text size */
-        @media only screen and (max-width: 300px) {
-            .text {
-                font-size: 11px
-            }
-        }
-    </style>
-
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="../css/showProductDesign.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d1feb19a20.js" crossorigin="anonymous"></script>
 </head>
 
@@ -153,10 +19,17 @@
         <div class="show_product_media">
 
             <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img id="product_image" src="" style="width:100%">
+                </div>
 
                 <div class="mySlides fade">
-                    <img src="https://cdn.shopify.com/s/files/1/0061/8378/0442/products/R063_1_2_1024x1024.jpg?v=1626172538"
-                        style="width:100%">
+                    <video playsinline style="width:100%; height:320px; pointer-events: none;" autoplay muted loop
+                        controls preload="auto">
+                        <source
+                            src="https://cdn.shopify.com/videos/c/vp/d6d5129e51b64b36b507ce5826fa1118/d6d5129e51b64b36b507ce5826fa1118.HD-1080p-2.5Mbps.mp4"
+                            type="video/mp4">
+                    </video>
                 </div>
 
                 <div class="mySlides fade">
@@ -165,24 +38,27 @@
                 </div>
 
                 <div class="mySlides fade">
-                    <img src="https://cdn.shopify.com/s/files/1/0061/8378/0442/products/R063_1_2_1024x1024.jpg?v=1626172538"
+                    <img src="https://cdn.shopify.com/s/files/1/0061/8378/0442/products/R063_4_1024x1024.jpg?v=1646289261"
                         style="width:100%">
                 </div>
+
 
             </div>
             <br>
 
             <div style="text-align:center">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+                <span class="dot"> </span>
+                <span class="dot"> </span>
+                <span class="dot"> </span>
+                <span class="dot"> </span>
             </div>
 
         </div>
 
         <div class="show_product_details">
             <h1 id="show_product_title"> Golden Elephant Charm Necklace </h1>
-            <p>MADE WITH PURE 925 SILVER</p>
+            <p style="color: #949494; font-weight:700; 
+            margin-bottom: 10px;">MADE WITH PURE 925 SILVER</p>
             <div id="rating"> 5.0 | <i class="fa-solid fa-star" style="color: rgb(255, 196, 0);"></i> 2 Reviews </p>
             </div>
 
@@ -191,33 +67,34 @@
                 <p id="show_price_price_Old"> 3550.00 </p>
             </div> <br>
             <img src="../media/a.jpg">
-            <p> Tax Inxluded</p>
+            <p style="color: #3b3b3bc7; margin-bottom:15px;"> Tax Inxluded</p>
 
             <input type="checkbox" id="wrap_product">
-            <label for="wrap_product"> Add Gift Wrap to your Order (Rs. 50)</label><br>
+            <label for="wrap_product" style="color: #3b3b3bc7;"> Add Gift Wrap to your Order (Rs. 50)</label><br>
 
             <button onclick="addToCart()"> ADD TO CART </button> <br>
             <button onclick="buyItNow()" style="background-color: #3d4246; color:white"> BUY IT NOW </button> <br>
             <button onclick="addToWishlist()"> ADD TO WISHLIST </button>
 
-            <p> ESTIMATED DELIVERY TIME </p>
-            <input type="text" id="check_delivery_input"><button id="check_delivery_btn">CHECK</button>
+            <p style="color: #3b3b3bc7; font-size:x-small; margin-top:10px"> ESTIMATED DELIVERY TIME </p>
+            <input type="text" id="check_delivery_input" placeholder="6 digit pincode"><button
+                id="check_delivery_btn">CHECK</button>
 
             <div id="Below_Delevery_Check_Container">
                 <div style="border-right:1px solid rgba(0, 0, 0, 0.432) ;">
                     <img
                         src="https://cdn.shopify.com/s/files/1/0061/8378/0442/t/76/assets/returns_small.png?v=1773164919095747155">
-                    <p>30 days easy return</p>
+                    <p> <br> 30 days easy return</p>
                 </div>
                 <div style="border-right:1px solid rgba(0, 0, 0, 0.432) ;">
                     <img
                         src="https://cdn.shopify.com/s/files/1/0061/8378/0442/t/76/assets/certificate_small.png?v=13131864088800804019">
-                    <p>Authenticity certificate</p>
+                    <p> <br> Authenticity certificate</p>
                 </div>
                 <div style="border-right:1px solid rgba(0, 0, 0, 0.432) ;">
                     <img
                         src="https://cdn.shopify.com/s/files/1/0061/8378/0442/t/76/assets/Female.png?v=4193799419793896922">
-                    <p>Best Suited for Women</p>
+                    <p> <br>Best Suited for Women</p>
                 </div>
                 <div>
                     <img
@@ -226,27 +103,174 @@
                 </div>
             </div>
 
-        </div>
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+
+
+            <div class='faq'>
+                <!--1 question-->
+                <div class="faq-container">
+                    <div class="faq-label">
+                        <div class="faq-label-text">
+                            SPECIAL OFFERS
+                        </div>
+                        <div class="faq-label-icon">
+                            <span class="material-icons">
+                                expand_more
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="faq-answer ">
+                        <div class="faq-answer-content">
+                            <h5> FLAT200 </h5>
+                            <p> Valid on orders more than Rs. 1800</p> <br>
+
+                            <h5> FLAT300</h5>
+
+                            <p>Valid on orders more than Rs. 2700</p> <br>
+
+
+                            <h5> COMBO25 </h5>
+
+                            <p> Buy 1 get 2nd at 25% OFF</p> <br>
+
+
+                            <h5>COMBO50<h5>
+
+                                    <p> Buy 2 get 3rd at 50% OFF</p> <br>
+
+
+                                    <h5>LOVE</h5>
+
+                                    <p>15% OFF on orders above Rs. 3500</p> <br>
+
+                        </div>
+
+                    </div>
+                </div>
+                <!--2 question-->
+                <div class="faq-container">
+                    <div class="faq-label">
+                        <div class="faq-label-text">
+                            PRODUCT DESCRIPTION
+                        </div>
+                        <div class="faq-label-icon">
+                            <span class="material-icons">
+                                expand_more
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="faq-answer ">
+                        <div class="faq-answer-content">
+                            <h5>The Inspiration: </h5>
+                            <p>A solitaire never fails to impress. One of the true classics, it captivates whoever bears
+                                witness. Inspired by the ring setting known and loved all over the world, this Silver
+                                Classic Solitaire Ring is our take on the evergreen trend.</p>
+                            <br>
+                            <h5>The Design: </h5>
+                            <p>This Silver Classic Solitaire Ring has been handcrafted, especially for YOU! The design
+                                truly needs no introduction. It’s simply a perfect balance between classy, elegant and
+                                bold!</p>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- 3 question -->
+                <div class="faq-container">
+                    <div class="faq-label">
+                        <div class="faq-label-text">
+                            SHIPPING DETAILS
+                        </div>
+                        <div class="faq-label-icon">
+                            <span class="material-icons">
+                                expand_more
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="faq-answer ">
+                        <div class="faq-answer-content">
+
+                            <ul>
+                                <li> Free express shipping </li>
+                                <li> 30 days return policy </li>
+                                <li> 6 month plating warranty </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="faq-container">
+                        <button><i class="fa-brands fa-facebook-square" style="color: rgb(21, 46, 131);"></i>
+                            SHARE</button>
+                        <button><i class="fa-brands fa-twitter" style="color: rgb(40, 90, 253);"></i> TWEET</button>
+                        <button><i class="fa-brands fa-pinterest" style="color: red;"></i> PIN IT</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
 
 
-    <h1> view product </h1>
-    <table>
-        <thead>
-            <tr>
-                <th>category</th>
-                <th>title</th>
-                <th>New Price</th>
-                <th>Old price</th>
-                <th>Image url</th>
-            </tr>
-        </thead>
-        <tbody id="table_body">
-            <!-- Append your output to tbody -->
-        </tbody>
-    </table>
+    <!-- footer code -->
 
+    <div id="First_Footer">
+        <div id="First_Footer_Item">
+
+            <p> Quick links </p>
+
+            <a href=""> Careers </a> <br>
+            <a href=""> Jewellery care</a> <br>
+            <a href=""> Reviews</a> <br>
+            <a href=""> Privacy policy</a> <br>
+            <a href="">Shipping & Handling</a> <br>
+            <a href="">Terms of service</a> <br>
+            <a href="">Frequently Asked Questions</a> <br>
+
+        </div>
+
+        <div id="First_Footer_Item">
+            <p> Newsletter </p>
+            <input type="email" placeholder="Email address"> <button>SUBSCRIBE</button>
+        </div>
+
+        <div id="First_Footer_Item">
+            <p> Contact us </p>
+            <p> BIS : HM/C - 6290031216 </p>
+            <p> For any suggestions, queries or complaints please contact us at :</p>
+            <p> - care@giva.co </p>
+            <p> - 080-47189504 (10 AM to 6:30 PM) </p>
+        </div>
+    </div>
+
+    <div id="Second_Footer">
+        <div id="Second_Footer_Item_SocialMedia">
+            <div id="Second_Footer_logo"> <img src="../media/Second_Footer_logo_facebook.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/Second_Footer_logo_instagram.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/Second_Footer_logo_youtube.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/Second_Footer_logo_linkedin.png" /> </div>
+        </div>
+
+        <div id="Second_Footer_Item_Payment_Logo">
+            <div id="Second_Footer_logo"> <img src="../media/airtel.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/amezon.jpg" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/amex.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/mastercard.jpg" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/mobi.webp" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/googlepay.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/emblem-Paypal.jpg" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/paytm.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/hdfc.jpg" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/rupay.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/visa.png" /> </div>
+            <div id="Second_Footer_logo"> <img src="../media/amex.png" /> </div>
+
+        </div>
+        <p> © 2022, GIVA Jewellery </p>
+    </div>
 
 </body>
 
@@ -258,51 +282,33 @@
     var CartProducts = JSON.parse(localStorage.getItem("Display_Product")) || [];
 
     CartProducts.map(function (elem) {
-        var r = document.createElement("tr");
-        var td1 = document.createElement("td");
-        td1.innerText = elem.category;
-        td1.style.backgroundColor = "red";
-        td1.width = "150px";
-
-        var td2 = document.createElement("td");
-        td2.innerText = elem.title;
-
-
-
-        td2.width = "350px";
-        td2.style.backgroundColor = "yellow";
-
-        var td3 = document.createElement("td");
-        td3.innerText = elem.NewPrice;
-        td3.style.backgroundColor = "green";
-        td3.width = "150px";
-
-        var td4 = document.createElement("td");
-        td4.innerText = elem.OldPrice;
-        td4.style.backgroundColor = "purple";
-        td4.width = "150px";
-
-
-        var td5 = document.createElement("td");
-        td5.width = "150px";
-
-        var picture = document.createElement("img");
-        picture.src = elem.pic;
-        picture.style.height = "100px";
-        td5.append(picture);
-
-        r.append(td1, td2, td3, td4, td5);
-        document.querySelector("tbody").append(r);
-
+        document.querySelector("#product_image").src = elem.pic;
         document.querySelector("#show_price_price_New").innerText = elem.NewPrice;
         document.querySelector("#show_price_price_Old").innerText = elem.OldPrice;
         document.querySelector("#show_product_title").innerText = elem.title;
     })
 
 
+
+
     function addToCart() {
-        alert("cart");
+        CartProducts.map(function (elem) {
+            var cartProductArray = JSON.parse(localStorage.getItem("add_to_cart")) || []
+            var ProductObj = {
+                category: elem.category,
+                pic: elem.pic,
+                title: elem.title,
+                NewPrice: elem.NewPrice,
+                OldPrice: elem.OldPrice,
+                price: elem.price,
+            };
+
+            cartProductArray.push(ProductObj);
+            localStorage.setItem("add_to_cart", JSON.stringify(cartProductArray));
+            window.open("cart.html", self);
+        })
     }
+
     function buyItNow() {
         alert("buy");
     }
@@ -328,8 +334,26 @@
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 4000); // Change image every 4 seconds
+
+        setTimeout(showSlides, 8000); // Change image every timeSlider seconds
     }
+
+    let faqLabel = document.querySelectorAll(".faq-label");
+
+    faqLabel.forEach(item => item.onclick = () => {
+        //selektuje Answer
+        item.nextElementSibling.classList.toggle('active');
+
+
+        let labelIcon = item.lastElementChild;
+        let icons = labelIcon.lastElementChild;
+        icons.classList.toggle('rotate');
+
+
+    })
+
+
+
 </script>
 
 </html>
