@@ -131,3 +131,11 @@
     font-size: 13px;
     margin-left: 60px;
   }
+
+  button:hover{
+    cursor: pointer;
+  }
+
+  i:hover{
+    cursor: pointer;
+  }

@@ -1,234 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Navbar</title>
-    <script
-      src="https://kit.fontawesome.com/24c494a6b6.js"
-      crossorigin="anonymous"
-    ></script>
-    <style>
-      #uplink {
-        background-color: lightpink;
-        padding: 10px;
-        border-radius: 5px;
-        text-align: center;
-      }
-      h1 {
-        text-align: center;
-        font-size: 15px;
-      }
-      #container {
-        display: flex;
-        justify-content: space-between;
-        height: 100px;
-      }
-      .icon {
-        margin-right: 30px;
-        justify-content: flex-end;
-        cursor: pointer;
-      }
-
-      .navbar {
-        display: flex;
-        cursor: pointer;
-        align-self: center;
-      }
-      .navbar div {
-        padding: 10px;
-      }
-      #icongift {
-        cursor: pointer;
-      }
-      i {
-        margin: 10px;
-        padding: 2px;
-        font-size: 20px;
-      }
-      .container1 {
-        display: none;
-        grid-template-columns: repeat(6, 1fr);
-        grid-template-rows: auto;
-        width: 50%;
-      }
-      #madhu {
-        display: grid;
-      }
-      .container1:hover {
-        display: block;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="uplink">
-      <p id="Buy"></p>
-    </div>
-
-    <div id="container">
-      <div id="headeritem">
-        <img
-          src="https://cdn.shopify.com/s/files/1/0061/8378/0442/files/logo_0448f214-5f81-4ac3-9740-361cd250daf1_180x.png?v=1644911387"
-        />
-      </div>
-
-      <div class="navbar">
-        <div class="collections">
-          <h1>
-            Collections
-            <i class="fa-solid fa-circle-chevron-down"></i>
-          </h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <script src="https://kit.fontawesome.com/d1feb19a20.js" crossorigin="anonymous"></script>  
+</head>
+<body>
+    
+  <div id="top_Navbar">
+      
+    <div id="slider">
+        <ul>
+          <li>
+          <div class="slider-container">
+            <p>Free shipping across India!</p>
+          </div>
+          </li>
+          
+          <li>
+          <div class="slider-container">
+            <p>Use code UGADI to get 10% OFF on Celebrations Collection!</p>
+          </div>
+          </li>
+          
+          <li>
+          <div class="slider-container">
+            <p>Use code LOVE for 15% OFF above Rs. 3,500!</p>
+          </div>
+          </li>
+          
+        </ul>
         </div>
+        
 
-        <div>
-          <h1>Gifts</h1>
+</div>
+<div id="main_navbar">
+<div id="navbar_logo">
+<img src="https://cdn.shopify.com/s/files/1/0061/8378/0442/files/logo_0448f214-5f81-4ac3-9740-361cd250daf1_180x.png?v=1644911387" height="50px" width="100px">
+</div>
 
-          <!-- <i class="fa-solid fa-circle-chevron-down"></i> -->
-          <!-- <select id="icongift" onchange="gifts()">
-            <option value="1">Gifts</option>
-            <option value="2">Gifts</option>
-          </select> -->
-        </div>
+<div id="navbar_options">
 
-        <div>Best of GIVA</div>
-        <div>personalised Jewellery</div>
-        <div>Dawn of Celebrations</div>
-        <div>Anshuka's Favourites</div>
-        <div>Gift Name</div>
-        <div>
-          <select id="icongift" onchange="More()">
-            <option value="1">More</option>
-            <option value="2">Gifts</option>
-          </select> 
-        </div>
-      </div>
+    
+<div class="dropdown">
+<button class="dropbtn" >  Collections
+    <i class="fa-solid fa-angle-down"></i>  </button>
+<div class="dropdown-content">
+    <table>
+        <tr>
+            <th>Shop By Category</th>
+            <th>Shop By Color</th>
+            <th>Shop By Stone</th>
+            <th>Shop By Style</th>
+            <th>Shop Featured</th>
+            <th>Shop Trending</th>
+        </tr>
+        <tr>
+            <td> 
+                <p onclick="RIngFun()"> Rings </p>
+                <p onclick="penFun()">  Necklaces & Pendants </p>
+                <p onclick="earFun()"> Earrings </p>
+                <p onclick="setsFun()"> Jewellery Sets </p>
+                <p> Bracelets </p>
+                <p> Toe Rings </p>
+                <p> Anklets </p>
+                <p> Chains </p>
+                <p> Mangalsutras </p>
+                <p> Nose Pins </p>
+                <p> ALL </p>
 
-      <div class="icon">
-        <i onclick="fun1()" class="fa-solid fa-magnifying-glass"></i>
-        <i onclick="fun2()" class="fa-solid fa-user"></i>
-        <i onclick="fun3()" class="fa-regular fa-heart"></i>
-        <i onclick="fun4()" class="fa-solid fa-bag-shopping"></i>
-      </div>
-    </div>
+            </td>
+            
+            <td>
+                <p> Gold </p>
+                <p> Rose Gold </p>
+                <p> Silver </p>
+                <p> Oxidised Silver </p>
+            </td>
 
-    <div class="container1">
-      <div>
-        <h3>Shop By Category</h3>
-        <a href="#">Rings</a>
-        <a href="#">>Necklace</a>
-        <a href="#">Earing</a>
-        <a href="#">Jewellery sets</a>
-        <a href="#">Braclets</a>
-        <a href="#">Toe rings</a>
-        <a href="#">Ankelts</a>
-        <a href="#">Chains</a>
-        <a href="#">Nose pins</a>
-        <a href="#">All</a>
-      </div>
-
-      <div>
-        <h3>Shops By Color</h3>
-        <a href="#">Gold</a>
-        <a href="#">Rose Gold</a>
-        <a href="#">Silver</a>
-        <a href="#">Oxidised Silver</a>
-      </div>
-
-      <div>
-        <h3>Shop By stone</h3>
-        <a href="#">Colored stone</a>
-        <a href="#">pearl</a>
-        <a href="#">pearl</a>
-        <a href="#">Silver</a>
-        <a href="#">Silver</a>
-      </div>
-
-      <div>
-        <h3>Shop By style</h3>
-        <a href="#">Wedding wear</a>
-        <a href="#">Colored stone</a>
-        <a href="#">Silver</a>
-        <a href="#">pearl</a>
-      </div>
-
-      <div>
-        <h3>Shop feature</h3>
-        <a href="#">Wedding wear</a>
-        <a href="#">Mens</a>
-        <a href="#">Party pieces</a>
-        <a href="#">Party pieces</a>
-        <a href="#">Party pieces</a>
-        <a href="#">Party pieces</a>
-      </div>
-
-      <div>
-        <h3>Shop trending</h3>
-        <a href="#">Colored stone</a>
-        <a href="#">pearl</a>
-        <a href="#">zircon</a>
-        <a href="#">none</a>
-      </div>
+            <td>
+                <p> Coloured Stone </p>
+                <p> Pearl </p>
+                <p> Zircon </p>
+                <p> Chalcedony </p>
+                <p> Marcasite </p>
+                <p> None </p>   
+            </td>
 
 
-      </div>
-    </div>
-  </body>
+            <td>
+                <p>  Everyday Staples </p>
+                <p>Office Minimals </p>
+                <p>Party Pieces </p>
+                <p>Wedding Wear </p> 
+                <p>Mens </p> 
+            </td>
+
+            <td>
+                <p style="color: red;">New </p>
+                <p>Bestsellers </p>
+                <p>Anushka's Favourites </p>
+                <p>AVNI- Oxidized Silver </p>
+                <p>Perfumes </p>
+            </td>
+            <td>
+                <p> Princess Collection </p>
+                <p>Floral Dreams </p>
+                <p>Divine Collection </p>
+                <p>Animal Love </p>
+                <p>Forever Together </p>
+                <p>Paradise of Pearls </p>
+                <p>Golden Glam </p> 
+            </td>
+        
+        </tr>
+      </table>
+      
+
+</div>
+</div>
+
+    
+<div class="dropdown">
+<button class="dropbtn">Gifts <i class="fa-solid fa-angle-down"></i></button>
+<div class="dropdown-content">
+<table style="width: 460px;">
+
+<tr>
+    <th>By Price </th>
+    <th>By Recipient</th>
+    <th>By Occasion </th>
+    <th>Others</th>
+  </tr>
+
+  <tr>
+      <td style="width: 105px;">
+          <p>Below Rs. 2,000</p>
+        <p>Above Rs. 2,000</p>
+      </td>
+
+    <td style="width: 105px;">  
+<p> Mother </p>
+<p> Sister </p>
+<p> Special One </p>
+<p> For Him </p>
+<p> Couples </p>
+    </td>
+
+    <td>
+<p> Just Because! </p>
+<p> Anniversary </p>
+<p> Birthday </p>
+<p> Marriage </p>
+<p> Women's Day </p>
+<p> Festive Gifts! </p>
+    </td>
+
+    <td>
+<p> Perfumes </p>
+<p> Cufflinks </p>
+    </td>
+
+  </tr>
+
+
+</table>
+
+</div>
+</div>
+
+
+<div class="dropdown">
+<button class="dropbtn">Best of GIVA </button>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">Personalised Jewellery </button>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">Dawn of Celebrations
+</button>
+</div>
+
+<div class="dropdown">
+<button class="dropbtn">Anushka's Favourites
+</button>
+</div>
+
+
+<div class="dropdown">
+<button class="dropbtn">More <i class="fa-solid fa-angle-down"></i></button>
+<div class="dropdown-content">
+<table style="width: 230px;">
+<tr>
+<td>
+<p>Track Order </p>
+<p> Gift Genie </p>
+<p> Jewellery care </p>
+<p> GIVA Cares </p>
+<p> Join us </p>
+<p> Contact us </p>
+<p> Frequently Asked Questions </p>
+<p> Media Mentions </p> 
+<p> GIVA Blog </p>
+</td>
+</tr>
+</table>
+
+</div>
+</div>
+</div>
+
+<div id="navbar_icons">
+    
+    <i class="fa-solid fa-magnifying-glass fa-lg" style="margin-right:15px;"></i>
+    <i class="fa-regular fa-user fa-lg" style="margin-right:15px;" ></i>
+    <i class="fa-regular fa-heart fa-lg" style="margin-right:15px;" onclick="wishlistFun()"></i>
+    <i class="fa-solid fa-bag-shopping fa-lg" onclick="addCartFun()"></i>
+</div>
+</div>
+
+    
+</body>
+<script src="../js/header.js"></script>
 </html>
-
-<script>
-  var arr = [
-    "Use code REGAL to get 15% Off on Princess Collection!",
-    "Use code LOVE for 15% OFF above Rs. 3,500!",
-    "Free shipping&nbsp;across India!",
-    "Buy 1 get 2nd at 25% Off!   Code COMBO25",
-  ];
-
-  document.querySelector(".collections").addEventListener("mouseover", collect);
-
-  document
-    .querySelector(".collections")
-    .addEventListener("mouseleave", collect1);
-
-  function collect() {
-    document.querySelector(".container1").style.display = "grid";
-    // console.log("abc");
-  }
-
-  function collect1() {
-    document.querySelector(".container1").style.display = "none";
-  }
-
-  document.querySelector("#Buy").innerText =
-    "Use code REGAL to get 15% Off on Princess Collection!";
-  setInterval(settime, "4000");
-  function settime() {
-    var a = document.getElementById("Buy");
-    console.log(a);
-    a.innerText = arr[Math.floor(Math.random() * 100) % 4];
-  }
-
-  function fun1() {
-    var t = "Rings";
-    localStorage.setItem("Display_Category", t);
-    window.open("template.html", "_self");
-  }
-
-  function fun2() {
-    var t = "Necklaces_&_Pendants";
-    localStorage.setItem("Display_Category", t);
-    window.open("template.html", "_self");
-  }
-
-  function fun3() {
-    var t = "Necklaces_&_Pendants";
-    localStorage.setItem("Display_Category", t);
-    window.open("template.html", "_self");
-  }
-
-  function fun4() {
-    var t = "Necklaces_&_Pendants";
-    localStorage.setItem("Display_Category", t);
-    window.open("template.html", "_self");
-  }
-</script>

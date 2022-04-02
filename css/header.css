@@ -1,0 +1,192 @@
+body{
+    font-family: "Avenir Next", sans-serif;
+    margin: 0px;
+}
+
+#top_Navbar{
+    height:50px;
+    width: 100%;
+    background-color: #ffdde4;
+}
+
+#main_navbar{
+margin-top: 20px;
+justify-content:center;
+display: inline-flex;
+width: 100%;
+border: none;
+border-bottom:0.2px solid rgba(128, 128, 128, 0.623) ;
+}
+
+#navbar_logo{
+height: 70px;
+width: 150px;
+}
+
+
+#navbar_icons{
+margin-top: 10px;
+width: 10%;
+
+}
+
+#navbar_options{
+padding: 10px;
+display: inline-flex;
+justify-content: center;
+}
+
+.dropbtn {
+
+color:#585858;
+background-color: transparent;
+padding: 5px;
+font-size: 15px;
+border: none;
+cursor: pointer;
+margin-right: 15px;
+}
+
+.dropdown {
+position: relative;
+display: inline-block;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+z-index: 1;
+}
+
+.dropdown-content table {
+color:#585858;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+table {
+border:0.2px solid rgba(128, 128, 128, 0.623) ;
+border-top: none;
+background-color: white;
+border-collapse: collapse;
+width: 70%;
+font-size: 15px;
+}
+
+td, th {
+text-align: left;
+padding: 8px;
+}
+
+
+th {
+    color: #666;
+    }
+
+td>p:hover {
+text-decoration: underline;
+    }  
+
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+
+
+#slider, ul
+{
+height: 200px;
+}
+
+#slider
+{
+margin: auto;
+overflow: hidden;
+position: relative;
+width: 600px;
+}
+
+#slider li
+{
+position: relative;
+width: 600px;
+display: inline-block;
+
+}
+
+#slider ul
+{
+list-style: none;
+position: absolute;
+left: 0px;
+top: 0px;
+width: 9000px;
+transition: left .2s linear;
+-moz-transition: left .2s linear;
+-o-transition: left .2s linear;
+-webkit-transition: left .2s linear;
+font-family: open sans;
+color: #666;
+}
+
+/*** Content ***/
+
+.slider-container
+{
+margin-top: -20px;
+text-align:center;
+}
+
+/*** target hooks ****/
+
+
+@-webkit-keyframes slide-animation {
+0% {opacity:0;}
+2% {opacity:1;}
+20% {left:0px; opacity:1;}
+22.5% {opacity:0.6;}
+25% {left:-600px; opacity:1;}
+45% {left:-600px; opacity:1;}
+47.5% {opacity:0.6;}
+50% {left:-1200px; opacity:1;}
+70% {left:-1200px; opacity:1;}
+72.5% {opacity:0.6;}
+75% {left:-1800px; opacity:1;}
+95% {opacity:1;}
+98% {left:-1800px; opacity:0;} 
+100% {left:0px; opacity:0;}
+}
+
+#slider ul
+{
+-webkit-animation: slide-animation 20s infinite;
+}
+
+table {
+border:0.2px solid rgba(128, 128, 128, 0.623) ;
+border-top: none;
+background-color: white;
+border-collapse: collapse;
+width: 900px;
+font-size: 14px;
+}
+
+td, th {
+vertical-align: top;
+text-align: left;
+padding: 8px;
+}
+
+th {
+    cursor: pointer;
+color: #666;
+}
+td {
+    cursor: pointer;
+}
+
+
