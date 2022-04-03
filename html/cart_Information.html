@@ -253,7 +253,7 @@
       <input type="text" placeholder="Phone" style="width:580px"> <br>
       <input type="checkbox" style="height:15px"><label for="" style="font-size: 12px;">	Save this information for next time</label>
     </form>
-<button id="Complete_order">Complete order</button>
+<button onclick="fun()" id="Complete_order">Complete order</button>
   
   </div>
 
@@ -332,8 +332,12 @@
     document.querySelector("#pro_pic").src= elem.pic;
     document.querySelector("#pro_title").innerText= elem.title;
     document.querySelector("#pro_price").innerText= elem.NewPrice;
+  
   })
 
+  function fun(){
+  window.open("cart_Information_Payment.html", "_self");
+  }
 
 
 </script>

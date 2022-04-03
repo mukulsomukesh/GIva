@@ -14,7 +14,7 @@ function loginFun() {
       alert("login success");
       flag = true;
       localStorage.setItem("Display_name", elem.firstname);
-      window.open("cart_information.html", "_self");
+      window.location.href="cart_Information.html";
     }
   });
 
