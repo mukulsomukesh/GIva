@@ -1,8 +1,6 @@
 var regdUsers = JSON.parse(localStorage.getItem("userCred")) || [];
-console.log(regdUsers);
 
 function loginFun() {
-  console.log("fun");
   var enteredEmail = document.querySelector("#email").value;
   var enteredPass = document.querySelector("#pass").value;
   //console.log(email, pass);
@@ -16,8 +14,7 @@ function loginFun() {
       alert("login success");
       flag = true;
       localStorage.setItem("Display_name", elem.firstname);
-      window.location.href = "homepage.html";
-
+      window.open("cart_information.html", "_self");
     }
   });
 

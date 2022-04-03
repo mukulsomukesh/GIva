@@ -231,7 +231,7 @@
     </div>
 
     <div style="text-align: center;">
-        <p> Cart <i class="fa-solid fa-greater-than"></i> Information <i class="fa-solid fa-greater-than"></i> Payment
+        <p> <span style="color: #ff8c77;"> Cart </span> <i class="fa-solid fa-chevron-right"></i> Information <i class="fa-solid fa-chevron-right"></i> Payment
         </p>
         <h1> Your cart </h1>
     </div>
@@ -252,11 +252,32 @@
         </div>
 
     </div>
+
+    
+
+
         <div id="cart_product" style="background-color:#f7f7f7">
 
-            <p> Order Summary </p>
+            <p> Order Summary </p> 
+            <div id="Subtotal">
+                <p> Subtotal </p> <p id="currentPrice2"> 1200</p>
+            </div>
+            <div id="Subtotal">
+                <p> Shipping: </p> <p> Rs. 99 Free</p>
+            </div>
 
-        </div>
+            <div id="Subtotal">
+                <p> Total: </p> <p id="currentPrice3"> Rs. 99 Free</p>
+            </div>
+            <div style="text-align: right; width:90%; font-size:13px; padding-left:20px; margin-top:-20px" > <p > or 4 interest-free payments of Rs. 1149.50 with  
+             <img src="https://cdn.sezzle.in/branding/2.0/Sezzle_Logo_FullColor.svg" height="12px" width="50px"> </p>  </div>
+             <p> P.S: Use discount code on the checkout page </p>
+             <input type="checkbox" id="wrap_product">
+             <label for="wrap_product" style="color: #3b3b3bc7;"> Make this a gift (+ Rs. 50.00 per item; print invoice to be removed)</label><br>
+             <p>Add a note to your order</p>
+             <input id="big_Input" type="text">
+             <button onclick="checkoutFun()"> CHECKOUT </button>
+            </div>
 
     </div>
 
@@ -332,12 +353,17 @@
 
         document.querySelector("#producttitle").innerText=elem.title; 
         document.querySelector("#currentPrice").innerText=elem.NewPrice;
+        document.querySelector("#currentPrice2").innerText=elem.NewPrice;
+        document.querySelector("#currentPrice3").innerText=elem.NewPrice;
         document.querySelector("#previousPrice").innerText=elem.OldPrice;
         document.querySelector("#productImage").src=elem.pic;
 
     })
 
 
+    function checkoutFun(){
+        window.open("cart_Information.html", "_self");
+    }
 
 </script>
 <script src="../js/header.js"></script>

@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+  
+    <link rel="stylesheet" href="../css/cart_information.css">
     <link rel="stylesheet" href="../css/header.css">
     <script src="https://kit.fontawesome.com/d1feb19a20.js" crossorigin="anonymous"></script>
 
@@ -231,11 +232,111 @@
     </div>
 </div>
 
+<div id="box_container">
+
+  <div id="box_container_item">
+    <div id="mini_box">  
+<p> Contact information </p>
+<p> Already have an account? <a href="login.html"> Log in </a> </p>
+</div>
+
+    <input type="text" placeholder="Email" style="width:580px"> <br>
+    <input type="checkbox" style="height:15px; margin-bottom:50px"><label for="" style="font-size: 12px;">	Save this information for next time</label>
+    
+    <form>
+      <label> Shipping address </label>
+      <input type="text" placeholder="India" style="width:580px"> <br>
+      <input type="text" placeholder="First Name" style="width:274px"> <input type="text" placeholder="Last Name" style="width:280px"><br>
+      <input type="text" placeholder="Address" style="width:580px"> <br>
+      <input type="text" placeholder="Apartment, Suite, etc" style="width:580px"> <br>
+      <input type="text" placeholder="City" style="width:173px"> <input type="text" placeholder="State"  style="width:175px"> <input type="text" placeholder="Pin code" style="width:178px"> <br>
+      <input type="text" placeholder="Phone" style="width:580px"> <br>
+      <input type="checkbox" style="height:15px"><label for="" style="font-size: 12px;">	Save this information for next time</label>
+    </form>
+<button id="Complete_order">Complete order</button>
+  
+  </div>
+
+  <div id="box_container_item"> 
+  
+    <img src="https://cdn.shopify.com/s/files/1/0061/8378/0442/files/HD_Grey_cropped-png.png?40630" style="margin-left: 140px;" height="90px" width="150px">
+
+
+    <table style="width: 400px; border:none; border-right:none; margin-bottom:20px; background-color:transparent;">
+      <thead>
+        <tr>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><img id="pro_pic" src="" height="60px" width="60px"> </td>
+          <td><p id="pro_title">  </p></td>
+         <td><p id="pro_price">  </p></td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <hr>
+<input style="margin-right:20px;width: 70%;"><button style="border:none ;width: 15%; background-color:#ebebeb; color:white; height:40px"> APPLY </button> 
+<hr>
+
+<h5>Redeem Giva Gift Card</h5>
+<div id="below_redeem"><input placeholder="Enter Coupone Code"><input  placeholder="Enter Pin"> <button> Redeem Now</button></div>
+<p style="color: #bd9219; font-size:12px; text-decoration:underline">Redeem more than one gift card ?</p>
+
+<p style="font-size: 20px;">Coupons</p>
+
+<div id="Coupons">
+  <div> <p> FLAT200 </p>
+    <p>Valid on orders more than Rs. 1800 </p></div>
+  <div> <p> FLAT300 </p>
+  <p>Valid on orders more than Rs. 2700</p></div>
+  <div> <p>COMBO25 </p>
+  <p>Buy 1 get 2nd at 25% OFF </p></div>
+</div>
+
+<div id="Subtotal">
+  <p> Total: </p> <p id="currentPrice3"> Rs. 99 Free</p>
+</div>
+<div id="Subtotal">
+  <p> Total: </p> <p id="currentPrice3"> Rs. 99 Free</p>
+</div>
+<hr>
+
+<div id="Subtotal">
+  <p> <span style="font-size:15px; line-height:20px"> Total: </span><br> Including ₹66.96 in taxes </p> <p id="currentPrice3" style="font-size: 22px;"> Rs. 99 Free</p>
+</div>
+
+</div>
+
 
 </body>
 
 <script src="../js/header.js"></script>
+<!-- add data file -->
+<script src="../js/data.js"></script>
 
+<script>
+
+
+
+  var CartProducts = JSON.parse(localStorage.getItem("add_to_cart")) || [];
+
+
+  CartProducts.map(function (elem) {
+
+    document.querySelector("#pro_pic").src= elem.pic;
+    document.querySelector("#pro_title").innerText= elem.title;
+    document.querySelector("#pro_price").innerText= elem.NewPrice;
+  })
+
+
+
+</script>
 </html>
 
 
