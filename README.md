@@ -73,13 +73,19 @@ GitHub Desktop & GitHub Browser for code collaboration.
 Slack, WhatsApp and Zoom for communication.
 
 Our Team Members:-
-
+<br>
 Madhuri Patel
+<br>
 Mukul jatav
+<br>
 Om prakash gupta
+<br>
 Pawan Bhardwaj
+<br>
 Sahil Kumar
+<br>
 Mumual ajim
+<br>
 
 Learnings -
 We all became proficient in reading the code of team members.
