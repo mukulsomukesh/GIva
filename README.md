@@ -66,7 +66,7 @@ Here all the products added to the cart will be shown. At the bottom, there is a
 Bag
 
 
-## Checkout Page -
+## Checkout Page :-
 
 Here the users can increase, decrease the quantity of the product and can apply discount coupons.
 
@@ -79,7 +79,7 @@ Here the users can add their payment details, address and can create their accou
 Payment page
 
 
-## Order confirmed Page -
+## Order confirmed Page :-
 Order placed
 
 ## The tools used for Collaboration :-
@@ -88,19 +88,19 @@ Order placed
 2. Slack, WhatsApp and Zoom for communication.
 
 ## Our Team Members :-
-<br>
+
 1. Madhuri Patel.
-<br>
-2. Mukul jatav.
-<br>
-3. Om Prakash Gupta
-<br>
-4. Pawan Bhardwaj
-<br>
-5. Sahil Kumar
-<br>
-6. Mumual ajam
-<br>
+
+2. Mukul.
+
+3. Om Prakash Gupta.
+
+4. Pawan Bhardwaj.
+
+5. Sahil Kumar.
+
+6. MD Naiyer Ajam.
+
 
 ## Learnings :-
 
