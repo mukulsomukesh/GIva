@@ -15,6 +15,12 @@ GIVA Jewellery, known as Jewellery products and it is an Indian manufacturer and
 
 We have tried our best to clone the offical Giva website.
 
+## Contribution of our team - 
+Mukul - Add To Cart Page , Checkout Page , Payment Page , Address details page.
+Om Prakash Gupta - Login , SignUp and Forget Password Page.
+Sahil kumar - Product page , (Navebar and Footer) and product proceed page.
+Pawan - Landing Page (Home Page).
+
 ## Tech Stacks used :-
 HTML : 45.70%
 CSS : 30.60%
